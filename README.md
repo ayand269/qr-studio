@@ -119,14 +119,17 @@ https://ayand269.github.io/qr-studio/?text=Hello%20World&size=1024&ec=H
 
 ## Deploy to GitHub Pages
 
-This repo is configured for automatic deployment via GitHub Actions.
+This repo deploys automatically via GitHub Actions on every push to `main`.
+
+### One-time setup
 
 1. Push your code to the `main` branch on [github.com/ayand269/qr-studio](https://github.com/ayand269/qr-studio).
-2. In your repo, go to **Settings → Pages → Build and deployment**.
-3. Set **Source** to **GitHub Actions**.
-4. After the workflow runs, your site will be live at **https://ayand269.github.io/qr-studio/**
+2. Go to **[Settings → Pages](https://github.com/ayand269/qr-studio/settings/pages)**.
+3. Under **Build and deployment → Source**, choose **Deploy from a branch**.
+4. Set **Branch** to `gh-pages` and folder to **`/ (root)`**, then click **Save**.
+5. Wait for the workflow to finish (Actions tab), then open **https://ayand269.github.io/qr-studio/**
 
-The deploy workflow lives in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) and runs on every push to `main`.
+> **Note:** If you previously set Source to "GitHub Actions", switch it to **Deploy from a branch → gh-pages** instead. That matches this workflow and avoids the deploy 404 error.
 
 ### Manual deploy (optional)
 
