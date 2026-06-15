@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>QR Studio</title>
+    <script>
+      // GitHub Pages SPA redirect
+      const segment = 1;
+      const repo = '/qr-studio';
+      const l = window.location;
+      l.replace(
+        l.protocol +
+          '//' +
+          l.hostname +
+          (l.port ? ':' + l.port : '') +
+          repo +
+          '/?p=' +
+          l.pathname.slice(repo.length + 1).replace(/^\//, '') +
+          l.search +
+          l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
